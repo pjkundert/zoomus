@@ -185,7 +185,7 @@ class ApiClient(object):
 def ignored(*exceptions):
     """Simple context manager to ignore expected Exceptions
 
-    :param \*exceptions: The exceptions to safely ignore
+    :param exceptions: The exceptions to safely ignore
     """
     try:
         yield
