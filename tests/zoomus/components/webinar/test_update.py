@@ -37,11 +37,11 @@ class UpdateV1TestCase(unittest.TestCase):
         )
 
     def test_requires_id(self):
-        with self.assertRaisesRegexp(ValueError, "'id' must be set"):
+        with self.assertRaisesRegex(ValueError, "'id' must be set"):
             self.component.update()
 
     def test_requires_host_id(self):
-        with self.assertRaisesRegexp(ValueError, "'host_id' must be set"):
+        with self.assertRaisesRegex(ValueError, "'host_id' must be set"):
             self.component.update(id='ID')
 
     @patch.object(components.base.BaseComponent, 'post_request', return_value=True)
@@ -80,7 +80,7 @@ class UpdateV2TestCase(unittest.TestCase):
         )
 
     def test_requires_id(self):
-        with self.assertRaisesRegexp(ValueError, "'id' must be set"):
+        with self.assertRaisesRegex(ValueError, "'id' must be set"):
             self.component.update()
 
 

@@ -65,7 +65,7 @@ class DeleteV2TestCase(unittest.TestCase):
         )
 
     def test_requires_id(self):
-        with self.assertRaisesRegexp(ValueError, "'meeting_id' must be set"):
+        with self.assertRaisesRegex(ValueError, "'meeting_id' must be set"):
             self.component.delete()
 
 

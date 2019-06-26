@@ -91,7 +91,7 @@ class ListV2TestCase(unittest.TestCase):
         )
 
     def test_requires_user_id(self):
-        with self.assertRaisesRegexp(ValueError, "'user_id' must be set"):
+        with self.assertRaisesRegex(ValueError, "'user_id' must be set"):
             self.component.list()
 
     @patch.object(components.base.BaseComponent, 'get_request', return_value=True)
