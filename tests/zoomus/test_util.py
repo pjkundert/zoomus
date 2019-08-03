@@ -138,7 +138,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_post.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -155,7 +155,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_post.assert_called_with(
             client.url_for('endpoint'),
             params={'foo': 'bar'},
-            data=None,
+            json=None,
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -172,7 +172,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_post.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=json.dumps({'foo': 'bar'}),
+            json={'foo': 'bar'},
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -189,7 +189,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_post.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=json.dumps({'foo': 'bar'}),
+            json=json.dumps({'foo': 'bar'}),
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -206,7 +206,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_post.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers={'foo': 'bar'},
             cookies=None,
             timeout=client.timeout
@@ -223,7 +223,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_post.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers=None,
             cookies={'foo': 'bar'},
             timeout=client.timeout
@@ -240,7 +240,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_patch.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -257,7 +257,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_patch.assert_called_with(
             client.url_for('endpoint'),
             params={'foo': 'bar'},
-            data=None,
+            json=None,
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -274,7 +274,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_patch.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=json.dumps({'foo': 'bar'}),
+            json={'foo': 'bar'},
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -291,7 +291,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_patch.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=json.dumps({'foo': 'bar'}),
+            json=json.dumps({'foo': 'bar'}),
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -308,7 +308,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_patch.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers={'foo': 'bar'},
             cookies=None,
             timeout=client.timeout
@@ -325,7 +325,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_patch.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers=None,
             cookies={'foo': 'bar'},
             timeout=client.timeout
@@ -342,7 +342,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_delete.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -359,7 +359,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_delete.assert_called_with(
             client.url_for('endpoint'),
             params={'foo': 'bar'},
-            data=None,
+            json=None,
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -376,7 +376,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_delete.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=json.dumps({'foo': 'bar'}),
+            json={'foo': 'bar'},
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -393,7 +393,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_delete.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=json.dumps({'foo': 'bar'}),
+            json=json.dumps({'foo': 'bar'}),
             headers=None,
             cookies=None,
             timeout=client.timeout
@@ -410,7 +410,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_delete.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers={'foo': 'bar'},
             cookies=None,
             timeout=client.timeout
@@ -427,7 +427,7 @@ class ApiClientTestCase(unittest.TestCase):
         mocked_delete.assert_called_with(
             client.url_for('endpoint'),
             params=None,
-            data=None,
+            json=None,
             headers=None,
             cookies={'foo': 'bar'},
             timeout=client.timeout
