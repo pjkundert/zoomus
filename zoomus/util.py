@@ -3,7 +3,6 @@
 from __future__ import absolute_import, unicode_literals
 
 import contextlib
-import json
 import requests
 import time
 import jwt
