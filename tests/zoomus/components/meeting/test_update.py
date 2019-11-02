@@ -80,7 +80,7 @@ class UpdateV2TestCase(unittest.TestCase):
 
         mock_post_request.assert_called_with(
             "/meetings/42",
-            params={
+            data={
                 'id': '42',
                 'foo': 'bar'
             }
@@ -97,7 +97,7 @@ class UpdateV2TestCase(unittest.TestCase):
         self.component.update(id='42', start_time=datetime(1969, 1, 1))
         mock_patch_request.assert_called_with(
             "/meetings/42",
-            params={
+            data={
                 'id': '42',
                 'start_time': '1969-01-01T00:00:00Z'
             }
