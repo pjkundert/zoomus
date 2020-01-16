@@ -72,6 +72,7 @@ class MeetingComponentV2(base.BaseComponent):
 
     def delete(self, **kwargs):
         util.require_keys(kwargs, 'id')
+        meetingId = kwargs.pop('id')
         return self.delete_request(
-            "/meetings/{}".format(kwargs.get('id')),
+            "/meetings/{}".format(meetingId),
             params=kwargs)
