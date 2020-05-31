@@ -61,9 +61,7 @@ class DeleteV2TestCase(unittest.TestCase):
 
         mock_delete_request.assert_called_with(
             "/webinars/ID",
-            params={
-                'id': 'ID',
-            }
+            params={}
         )
 
     def test_requires_id(self):

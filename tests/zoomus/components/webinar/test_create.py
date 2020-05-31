@@ -79,7 +79,7 @@ class CreateV2TestCase(unittest.TestCase):
 
         mock_post_request.assert_called_with(
             "/users/ID/webinars",
-            params={
+            data={
                 'user_id': 'ID',
             }
         )

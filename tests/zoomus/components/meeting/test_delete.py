@@ -66,9 +66,7 @@ class DeleteV2TestCase(unittest.TestCase):
         self.component.delete(id='ID')
         mock_delete_request.assert_called_with(
             "/meetings/ID",
-            params={
-                'id': 'ID',
-            }
+            params={}
         )
 
     def test_requires_id(self):

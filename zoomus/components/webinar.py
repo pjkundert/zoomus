@@ -63,20 +63,25 @@ class WebinarComponentV2(base.BaseComponent):
 
     def create(self, **kwargs):
         util.require_keys(kwargs, 'user_id')
+        if kwargs.get('start_time'):
+            kwargs['start_time'] = util.date_to_str(kwargs['start_time'])
         return self.post_request(
             "/users/{}/webinars".format(kwargs.get('user_id')),
-            params=kwargs)
+            data=kwargs)
 
     def update(self, **kwargs):
         util.require_keys(kwargs, 'id')
+        if kwargs.get('start_time'):
+            kwargs['start_time'] = util.date_to_str(kwargs['start_time'])
         return self.patch_request(
             "/webinars/{}".format(kwargs.get('id')),
-            params=kwargs)
+            data=kwargs)
 
     def delete(self, **kwargs):
         util.require_keys(kwargs, 'id')
+        meetingId = kwargs.pop('id')
         return self.delete_request(
-            "/webinars/{}".format(kwargs.get('id')),
+            "/webinars/{}".format(meetingId),
             params=kwargs)
 
     def end(self, **kwargs):

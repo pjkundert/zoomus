@@ -74,7 +74,7 @@ class UpdateV2TestCase(unittest.TestCase):
 
         mock_patch_request.assert_called_with(
             "/webinars/ID",
-            params={
+            data={
                 'id': 'ID',
             }
         )
